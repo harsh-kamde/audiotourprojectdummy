@@ -1,4 +1,4 @@
-# notify
+# sightspeak
 
 A new Flutter project.
 

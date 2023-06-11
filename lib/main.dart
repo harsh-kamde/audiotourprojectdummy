@@ -1,28 +1,39 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:notify/screens/driverscreen.dart';
-import 'package:notify/screens/homescreen.dart';
+import 'package:sightspeak/musicplayer.dart';
+import 'package:sightspeak/qr_scanner.dart';
+import 'package:mobile_scanner/mobile_scanner.dart';
+import 'package:sightspeak/usermap.dart';
 
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  Firebase.initializeApp();
+void main()
+{
+
   runApp(const MyApp());
 }
-
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget
+{
   const MyApp({super.key});
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+          appBarTheme: const AppBarTheme(
+            backgroundColor: Colors.transparent,
+            elevation: 0.0,
+          )
       ),
-      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: HomeScreen(),
+      // home: QRScanner(),
+      // home: UserCurrentLocation(),
+      home: AudiomapWidget(),
+
+      debugShowCheckedModeBanner: false,
+      title: 'QR Scanner',
     );
   }
+
 }
+
+
+
+
+
