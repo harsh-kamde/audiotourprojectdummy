@@ -1,0 +1,32 @@
+Here's an updated pseudo pathway based on your requirements:
+
+1. Map Integration with Google Maps:
+   a. Add the `google_maps_flutter` package as a dependency in your `pubspec.yaml` file.
+   b. Obtain the necessary API key from the Google Cloud Platform Console for using Google Maps services.
+   c. Set up the necessary configurations for the Google Maps plugin in your Flutter app.
+   d. Create a screen that displays the map using the `GoogleMap` widget from the `google_maps_flutter` package.
+   e. Customize the map view, add markers for the driver's position and bus position, and implement the necessary interactions.
+
+2. Location Sharing with Geolocator:
+   a. Add the `geolocator` package as a dependency in your `pubspec.yaml` file.
+   b. Use the package's APIs to fetch the driver's live location based on the device's GPS capabilities.
+   c. Configure the location service to provide periodic location updates.
+   d. Set up Firebase Firestore to store the driver's location data.
+   e. Update the stored location data in Firestore at regular intervals to reflect the driver's live location.
+
+3. Alert System:
+   a. Calculate Distance:
+      - Use the Haversine formula or the `geolocator` package to calculate the distance between the passenger's location and the bus's current position.
+
+   b. Trigger Alerts:
+      - When the calculated distance is within 2 kilometers, send a push notification using Firebase Cloud Messaging.
+
+4. User Interface:
+   a. Design the screens for the driver and passenger interfaces.
+   b. Implement a map view using the `GoogleMap` widget from `google_maps_flutter` to display the driver's and bus's positions.
+   c. Implement additional UI elements such as distance information, ETA, and any desired features like a chat or messaging interface.
+
+5. Firebase Integration:
+   a. Set up Firebase in your Flutter project by following the Firebase Flutter setup guide.
+   b. Use Firebase Firestore to store the driver's location data.
+   c. Use Firebase Cloud Messaging to send push notifications to passengers when the bus is within 2 kilometers.
